@@ -1,0 +1,79 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        const double MAX_WIDTH = 5.0;
+        const double MAX_HEIGHT = 5.0;
+        const double MIN_WIDTH = 0.0;
+        const double MIN_HEIGHT = 0.0;
+        double woodLength;
+        double glassArea;
+        double height;
+        double width;
+
+        string heightString;
+        string widthString;
+
+        Console.WriteLine("Please enter the Height of the area");
+
+        heightString = Console.ReadLine();
+
+        height = double.Parse(heightString);
+
+        if (height > MAX_HEIGHT)
+        {
+            Console.WriteLine("Measuremet to large using Max Height of 5");
+            height = MAX_HEIGHT;
+        }
+
+        if (height < MIN_HEIGHT)
+        {
+            Console.WriteLine("Measuremet to small using Min Height of 0");
+            height = MAX_HEIGHT;
+        }
+
+        else
+        {
+            Console.WriteLine("Using " + height);
+        }
+
+        Console.WriteLine("Please enter the Width of the area");
+
+        widthString = Console.ReadLine();
+
+        width = double.Parse(heightString);
+
+        if (width > MAX_WIDTH)
+        {
+            Console.WriteLine("Measuremet to large using Max Width of 5 please check measurement");
+            width = MAX_WIDTH;
+        }
+
+        if (width < MIN_WIDTH)
+        {
+            Console.WriteLine("Measuremet to small using Min Width of 0");
+            width = MAX_WIDTH;
+        }
+
+        else
+        {
+            Console.WriteLine("Using " + width);
+        }
+
+        woodLength = 2 * (height * width) * 3.25;
+        glassArea = 2 * (height * width);
+
+        Console.WriteLine("The length of the Wood is " + woodLength + " feet");
+        Console.WriteLine("The area of Glass " + glassArea + " sq metres");
+
+
+
+
+
+    }
+
+    }
+
+
