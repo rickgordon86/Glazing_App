@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BottleApp
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("What is the price per bottle £");
+            string pricePerBottleString = Console.ReadLine();
+            int pricePerBottle = int.Parse(pricePerBottleString);
+
+            Console.WriteLine("How many tablets");
+            string tabletCountString = Console.ReadLine();
+            int tabletCount = int.Parse(tabletCountString);
+
+            int bottleCount = ((tabletCount + 99) / 100);
+            int salePrice = bottleCount * pricePerBottle;
+
+            Console.WriteLine("The number of bottles is " +
+            bottleCount);
+            Console.WriteLine("The total price is £" + salePrice);
+
+
+        }
+    }
+}
